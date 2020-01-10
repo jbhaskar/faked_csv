@@ -11,6 +11,10 @@ module FakedCSV
             @fields
         end
 
+        def include_headers?
+            !@config['include_headers'].nil? && @config['include_headers']
+        end
+
         def headers
             fields.map{|f| f[:name]}
         end
