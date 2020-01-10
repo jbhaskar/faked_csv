@@ -1,7 +1,6 @@
 require 'optparse'
 require 'json'
 require 'open-uri'
-require 'open_uri_redirections'
 require 'faked_csv'
 
 module FakedCSV

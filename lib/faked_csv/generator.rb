@@ -25,6 +25,7 @@ module FakedCSV
         end
 
         def print_to(writer)
+            writer.write(headers.join(",") + "\n") unless headers.empty?
             (0...@config.row_count).each do |r|
                 @config.fields.each_with_index do |field, index|
                     suffix = (index == (@config.fields.size - 1)) ? '' : ','
